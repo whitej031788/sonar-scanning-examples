@@ -47,4 +47,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dependency-files.tar.xz
-          path: dependency-files.tar.xz
+          path: ".scannerwork/dependency-files.tar.xz"
+
+      - name: Upload Dependency TAR
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-files.tar.xz
+          path: ".build/sonar/dependency-files.tar.xz"
