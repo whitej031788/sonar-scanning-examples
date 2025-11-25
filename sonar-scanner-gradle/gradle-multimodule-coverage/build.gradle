@@ -21,7 +21,7 @@ subprojects {
             property('sonar.projectName', 'Example of SonarScanner for Gradle Usage - MultiModule with Coverage')
             property("sonar.projectKey", "Gradle-Multi-Module")
             property("sonar.verbose", "true")
-            property("sonar.sca.keepReport", "true")
+            property("sonar.scanner.keepReport", "true")
         }
     }
 
