@@ -6,6 +6,7 @@ sonar {
         property 'sonar.projectName', 'Example of SonarScanner for Gradle (multimodule with Jacoco code coverage)'
         property 'sonar.projectKey', 'org.sonarqube.gradle-multi-module-jacoco'
         property "sonar.verbose", "true"
-        property "sonar.sca.keepReport", "true"
+        property "sonar.scanner.keepReport", "true"
+        property "sonar.sca.debug", "true"
     }
 }
