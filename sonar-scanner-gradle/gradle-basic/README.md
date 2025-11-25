@@ -1,4 +1,4 @@
-# SonarScanner for Gradle
+# SonarScanner for Gradles
 
 This example demonstrates how to analyze a simple project built with [Gradle](https://gradle.org/). See [SonarScanner for Gradle](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner-for-gradle/) for more information.
 

@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./sonar-scanner-gradle/gradle-basic
+        working-directory: ./sonar-scanner-gradle/gradle-multimodule-coverage
 
     steps:
       - uses: actions/checkout@v4
@@ -34,10 +34,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('./sonar-scanner-gradle/gradle-basic/**/*.gradle*') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('./sonar-scanner-gradle/gradle-multimodule-coverage/**/*.gradle*') }}
           restore-keys: ${{ runner.os }}-gradle
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: ./gradlew build sonar --info
+        run: ./gradlew build sonar -debug --info

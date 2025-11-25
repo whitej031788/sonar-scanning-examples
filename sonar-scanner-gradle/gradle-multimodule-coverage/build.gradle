@@ -18,6 +18,11 @@ subprojects {
     sonar {
         properties {
             property 'sonar.coverage.jacoco.xmlReportPaths', "$projectDir.parentFile.path/build/reports/jacoco/codeCoverageReport/codeCoverageReport.xml"
+            property('sonar.projectName', 'Example of SonarScanner for Gradle Usage - MultiModule with Coverage')
+            property("sonar.projectKey", "Gradle-Multi-Module")
+            property("sonar.verbose", true)
+            property("sonar.sources", "src/main")
+            property "sonar.tests", "src/test"
         }
     }
 
